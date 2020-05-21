@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.table, sap.ui.layout"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{
+					"ibm.fin.ar" : "./"
+				}'
+				data-sap-ui-xx-bindingSyntax="complex"
+				></script>
+				
+		<script>
+			// var oBtn = new sap.m.Button("idSpiderman",{
+			// 	text: "Click me",
+			// 	press: function(){
+			// 		alert('welcome to ui5');
+			// 	}
+			// });
+			// oBtn.placeAt("myBtn");
+			
+			// var oView = new sap.ui.view("idView", {
+			// 	type:"JS",
+			// 	viewName:"bahubali.view.Main"
+			// });
+			// oView.placeAt("myjs");
+			
+			// var oView1 = new sap.ui.view("idXMLView",{
+			// 	type:"XML"	,
+			// 	viewName: "bahubali.view.MyXML"
+			// });
+			// oView1.placeAt("myBtn");
+			//oView1.placeAt("myjs");
+			//the index html will only be used for testing our componentjs
+			var oCompContainer = new sap.ui.core.ComponentContainer({
+				name: "ibm.fin.ar"
+			});
+			
+			oCompContainer.placeAt("myjs");
+			
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div id="myjs"></div>
+		<div id="myBtn"></div>
+	</body>
+</html>

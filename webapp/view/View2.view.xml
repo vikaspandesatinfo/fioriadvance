@@ -1,0 +1,76 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.ui.layout.form"
+	xmlns:anubhav="ibm.fin.ar.controls"
+	xmlns="sap.m" controllerName="ibm.fin.ar.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Second View" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<!--<Button icon="sap-icon://arrow-left" text="Back" press="onBack"></Button>-->
+			<ObjectHeader title="{NAME}" intro="{DESCRIPTION}" 
+						  number="{PRICE}" numberUnit="{CURRENCY_CODE}"></ObjectHeader>
+			<IconTabBar>
+				<items>
+					<IconTabFilter key="idMore" text="More Details" icon="sap-icon://display-more">
+						<anubhav:MyHeading arya="Titian" color="blue" whitewalker="5px dashed red"></anubhav:MyHeading>
+						<anubhav:MyHeading arya="John Snow" whitewalker="2px dotted black"></anubhav:MyHeading>
+						<Button text="You waana know,open?" press="onFunctionImport"></Button>
+						<anubhav:AmazingButton text="My Amazing Button" nedstark="onClick"></anubhav:AmazingButton>
+						<core:Fragment type="XML" fragmentName="ibm.fin.ar.fragments.simple"></core:Fragment>
+					</IconTabFilter>
+					<IconTabFilter key="idSupp" text="Suppliers" icon="sap-icon://supplier">
+						<Table id="idTable" items="{local>/Supplier}" itemPress="onSelectedSupplier">
+							<headerToolbar>
+								<Toolbar>
+									<ToolbarSpacer />
+									<Button icon="sap-icon://settings" press="onSettings"></Button>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<Label text="Name"></Label>
+								</Column>
+								<Column minScreenWidth="Tablet">
+									<Label text="Contact Person"></Label>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Label text="Since When"></Label>
+								</Column>
+								<Column>
+									<Label text="City/Country"></Label>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Navigation">
+									<cells>
+										<Text text="{local>name}"></Text>
+										<Input value="{local>contactPerson}"></Input>
+										<Text text="{local>sinceWhen}"></Text>
+										<Input value="{local>city}" showValueHelp="true" valueHelpRequest="onF4Help"></Input>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+					<IconTabFilter key="idCity" text="Cities" icon="sap-icon://home">
+						<Select items="{local>/Cities}">
+							<core:Item key="{local>name}" text="{local>name}"></core:Item>
+						</Select>
+						<ComboBox items="{local>/Cities}" >
+							<core:Item key="{local>name}" text="{local>name}"></core:Item>
+						</ComboBox>
+						<MultiComboBox items="{/Cities}" selectionChange="onSelect">
+							<core:Item key="{local>name}" text="{local>name}"></core:Item>
+						</MultiComboBox>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Save" type="Accept" press="onSave"></Button>
+				<Button text="Cancel" type="Reject"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

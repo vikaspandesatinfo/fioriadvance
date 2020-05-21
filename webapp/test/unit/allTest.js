@@ -1,0 +1,1 @@
+sap.ui.define(["ibm/fin/ar/test/unit/util/formatter"],function(){});

@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:anubhav="ibm.fin.ar.controls" xmlns="sap.m" controllerName="ibm.fin.ar.controller.Add" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Second View" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+					labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+					columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Product Id"/>
+						<Input id="name" value="{viewModel>/productData/PRODUCT_ID}"/>
+						<Button icon="sap-icon://delete" press="onDelete"></Button>
+						<Label text="Name/Description"/>
+						<Input value="{viewModel>/productData/NAME}"></Input>
+						<Input value="{viewModel>/productData/DESCRIPTION}">
+							<layoutData>
+								<l:GridData span="XL1 L2 M2 S4"/>
+							</layoutData>
+						</Input>
+						<Label text="Price/Currency"/>
+						<Input value="{viewModel>/productData/PRICE}">
+							<layoutData>
+								<l:GridData span="XL1 L2 M2 S4"/>
+							</layoutData>
+						</Input>
+						<Input value="{viewModel>/productData/CURRENCY_CODE}"/>
+						<Label text="Country"/>
+						<Select id="country" selectedKey="{Country}">
+							<items>
+								<core:Item text="England" key="England"/>
+								<core:Item text="Germany" key="Germany"/>
+								<core:Item text="USA" key="USA"/>
+							</items>
+						</Select>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Save" type="Accept" press="onSave"></Button>
+				<Button text="Cancel" type="Reject"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

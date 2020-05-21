@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "ibm.fin.ar.fioriadvance",
+        "description": "fruits app",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#fioriadvance-Display",
+        "navigationComponentName": "ibm.fin.ar",
+        "intentSemanticObject": "fioriadvance",
+        "intentAction": "Display",
+        "html5ApplicationName": "fioriadvance",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "5df8b5ce-4525-4e86-9e7c-c8c4df2f37dd"
+        ],
+        "contentPackages": [
+            "a52220b3-e61b-4464-861b-41d57759fe06"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Fruit Store Faster",
+        "subtitle": "Fast and Furious",
+        "searchKeywords": "Fruit Store Faster,Fast and Furious",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

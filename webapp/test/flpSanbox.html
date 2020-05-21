@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+				window["sap-ushell-config"] = {
+					defaultRenderer : "fiori2",
+					renderers: {
+						fiori2: {
+							componentData: {
+								config: {
+									search: "hidden"
+								}
+							}
+						}
+					},
+					applications: {
+						"Fruits-manage":{
+							additionalInformation:"SAPUI5.Component=ibm.fin.ar",
+							applicationType:"URL",
+							url:"../",
+							title: "Bazunga",
+							description: "boogyman"
+						}
+					}
+				};
+			</script>
+		
+		<script src="/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+        <title>Fiori Sandbox Demo</title>
+
+		<!-- Bootstrap the UI5 core library -->
+		<script src="/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.table, sap.ui.layout,sap.ushell"
+				data-sap-ui-theme="sap_belize"
+				data-sap-ui-resourceroots='{
+					"ibm.fin.ar" : "./"
+				}'
+				data-sap-ui-xx-bindingSyntax="complex"
+		></script>
+
+
+		<script>
+		///make sure that our code for consuming sap ui libs is only invoked once
+		//sap resources are loaded in browser
+			sap.ui.getCore().attachInit(function(){
+				sap.ushell.Container.createRenderer().placeAt("myjs");
+			});
+		</script>
+        	
+		
+	</head>
+	<body class="sapUiBody">
+		<div id="myjs"></div>
+		<div id="myBtn"></div>
+	</body>
+</html>

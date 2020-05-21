@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../../../resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.table, sap.ui.layout"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{
+					"ibm.fin.ar" : "../../"
+				}'
+				data-sap-ui-xx-bindingSyntax="complex"
+				></script>
+		<link rel="stylesheet" type="text/css" href="../../../resources/sap/ui/thirdparty/qunit-2.css">
+		<script src="../../../resources/sap/ui/thirdparty/qunit-2.js"></script>		
+		<script src="../../../resources/sap/ui/qunit/qunit-junit.js"></script>		
+		<script src="../../../resources/sap/ui/qunit/qunit-coverage.js"></script>		
+		
+		<script>
+			QUnit.config.autostart = false;
+			sap.ui.getCore().attachInit(function(){
+				sap.ui.require(["ibm/fin/ar/test/integration/AllJourneys"],
+								function(allTest){
+									QUnit.start();
+								}
+				)	;
+			});
+		</script>
+	</head>
+	<body class="sapUiBody">
+			<div id="qunit"/>
+			<div id="qunit-fixture"/>
+	</body>
+</html>
